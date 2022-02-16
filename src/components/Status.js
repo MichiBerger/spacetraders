@@ -1,10 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+Status.propTypes = {
+  isGreen: PropTypes.bool,
+};
 
 export default function Status({ isGreen }) {
   return (
     <Wrapper>
-      <p>Status:</p> 
-      <StatusDot isGreen={isGreen}></StatusDot>
+      <p>Status:</p>
+      <StatusDot isGreen={isGreen}>
+        <span className="sr-only">{isGreen ? 'green' : 'red'}</span>
+      </StatusDot>
     </Wrapper>
   );
 }
@@ -19,6 +26,6 @@ const Wrapper = styled.section`
 const StatusDot = styled.div`
   width: 24px;
   height: 24px;
-  background-color: ${props => props.isGreen ? 'green' : 'crimson'};
+  background-color: ${props => (props.isGreen ? 'green' : 'crimson')};
   border-radius: 50%;
 `;

@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
 }
 
-sr-only {
+.sr-only {
   position: absolute;
 width: 1px;
 height: 1px;
