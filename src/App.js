@@ -1,8 +1,8 @@
-
+import Status from "./components/Status.js";
 function App() {
   return (
     <div>
-      <Status isGreen={false} />
+      <Status isGreen={true} />
     </div>
   );
 }
